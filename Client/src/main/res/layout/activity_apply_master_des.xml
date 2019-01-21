@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="79dp"
+                android:layout_height="1dp"
+                android:background="#d5462c"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="测算名师招募进行中"
+                android:textColor="#d5462c"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="79dp"
+                android:layout_height="1dp"
+                android:background="#d5462c"></View>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/des_bg"
+            android:gravity="center"
+            android:text="申请资格"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.专业的易学知识"
+                android:textColor="#ff8b80c2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="2.符合平台要求，遵守平台制度"
+                android:textColor="#ff8b80c2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="3.时间充足，能及时提供服务"
+                android:textColor="#ff8b80c2"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@mipmap/des_bg"
+            android:gravity="center"
+            android:text="我们提供"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.专业的易学平台"
+                android:textColor="#ff8b80c2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="2.优质的用户资源"
+                android:textColor="#ff8b80c2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="3.良好的合作方式"
+                android:textColor="#ff8b80c2"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="107dp"
+                android:layout_height="1dp"
+                android:background="#d5462c"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="入驻流程说明"
+                android:textColor="#d5462c"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="107dp"
+                android:layout_height="1dp"
+                android:background="#d5462c"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/des_1"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:textColor="#ff8b80c2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/des_2"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:text="注册登录大师账号"
+                android:textColor="#ff8b80c2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/des_3"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:text="进入大师端个人中心，填写资料并提交审核"
+                android:textColor="#ff8b80c2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/des_4"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:text="审核通过及入驻成功"
+                android:textColor="#ff8b80c2"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

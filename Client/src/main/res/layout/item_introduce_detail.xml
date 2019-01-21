@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="能帮你赚到钱的50节智商提高课"
+        android:textColor="#ff333333"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <com.willy.ratingbar.ScaleRatingBar
+            android:id="@+id/scaleRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            app:srb_drawableEmpty="@mipmap/gray_star"
+            app:srb_drawableFilled="@mipmap/yellow_star"
+            app:srb_scrollable="false"
+            app:srb_clickable="false"
+            app:srb_starPadding="2dp"
+            app:srb_starWidth="10dp"
+            app:srb_starHeight="10dp"
+            app:srb_stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/tv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.5分"
+            android:textColor="#ff999999"
+            android:textSize="9sp"/>
+        <TextView
+            android:id="@+id/tv_learn_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="10357人学过"
+            android:textColor="#ff999999"
+            android:textSize="9sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_tag_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥"
+            android:textSize="9sp"
+            android:textColor="#f55a5a"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="98"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#f55a5a"/>
+
+        <TextView
+            android:id="@+id/tv_old_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="¥ 198.00"
+            android:textSize="9sp"
+            android:textColor="#999"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="适用人群"
+            android:textColor="#ff333333"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_people_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="课程介绍"
+        android:textColor="#ff333333"
+        android:textSize="12sp"/>
+
+</LinearLayout>

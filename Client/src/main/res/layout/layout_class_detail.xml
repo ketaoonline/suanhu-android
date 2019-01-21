@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xiaoxiong.library.view.headerviewpager.HeaderViewPager
+        android:id="@+id/scrollableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tl:hvp_topOffset="0dp">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@mipmap/loading" />
+
+        <com.xiaoxiong.library.view.tablayout.CommonTabLayout
+            android:id="@+id/commonTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            tl:tl_indicator_color="@color/main_text_checked"
+            tl:tl_textBold="SELECT"
+            tl:tl_textSelectColor="@color/main_text_checked"
+            tl:tl_textUnselectColor="#999999"
+            tl:tl_underline_color="#DDDDDD"
+            tl:tl_underline_height="1dp" />
+
+        <com.xiaoxiong.library.view.CustomViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+        </com.xiaoxiong.library.view.CustomViewPager>
+
+    </com.xiaoxiong.library.view.headerviewpager.HeaderViewPager>
+
+
+</LinearLayout>

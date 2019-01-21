@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f7f7f7"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="#ccdddddd"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="取消"
+                android:textColor="#909090"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <com.xiaoxiong.library.view.tablayout.SegmentTabLayout
+                    android:id="@+id/segmentTabLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:tl_bar_color="#ffffff"
+                    app:tl_indicator_color="#A096DE"
+                    app:tl_indicator_margin_bottom="2dp"
+                    app:tl_indicator_margin_left="2dp"
+                    app:tl_indicator_margin_right="2dp"
+                    app:tl_indicator_margin_top="2dp"
+                    app:tl_tab_width="80dp"
+                    app:tl_textBold="BOTH" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="确定"
+                android:textColor="#A096DE"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp">
+
+            <com.xiaoxiong.library.view.datepicker.StringScrollPicker
+                android:id="@+id/ssp_year"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_weight="1"
+                app:spv_max_text_size="24sp"
+                app:spv_min_text_size="18sp"
+                app:spv_visible_item_count="3" />
+
+            <com.xiaoxiong.library.view.datepicker.StringScrollPicker
+                android:id="@+id/ssp_month"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_weight="1"
+                app:spv_max_text_size="24sp"
+                app:spv_min_text_size="18sp"
+                app:spv_visible_item_count="5" />
+
+            <com.xiaoxiong.library.view.datepicker.StringScrollPicker
+                android:id="@+id/ssp_day"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_weight="1"
+                app:spv_max_text_size="24sp"
+                app:spv_min_text_size="18sp"
+                app:spv_visible_item_count="5" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

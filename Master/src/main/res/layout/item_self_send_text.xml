@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_send_head"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/loading" />
+
+    <TextView
+        android:id="@+id/tv_send_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:maxWidth="200dp"
+        android:layout_marginRight="10dp"
+        android:textIsSelectable="true"
+        android:layout_toLeftOf="@+id/iv_send_head"
+        android:background="@drawable/bg_chat_send_image"
+        android:text="我想买理财产品"
+        android:textColor="#ffffffff"
+        android:textSize="13sp" />
+
+
+</RelativeLayout>

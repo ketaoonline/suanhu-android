@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="255dp"
+        android:layout_height="115dp"
+        android:background="@drawable/shape_white"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="9dp"
+            android:text="老师将在3个小时内作答"
+            android:textColor="#ff000000"
+            android:textSize="9sp"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

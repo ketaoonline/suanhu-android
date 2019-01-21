@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_text_checked"
+        android:orientation="vertical">
+
+        <com.xiaoxiong.library.view.tablayout.SegmentTabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            tl:tl_indicator_anim_enable="true"
+            tl:tl_indicator_bounce_enable="false"
+            tl:tl_indicator_color="#fff"
+            tl:tl_tab_padding="5dp"
+            tl:tl_textSelectColor="@color/main_text_checked"
+            tl:tl_textUnselectColor="#fff" />
+
+    </LinearLayout>
+
+    <com.xiaoxiong.library.view.CustomViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

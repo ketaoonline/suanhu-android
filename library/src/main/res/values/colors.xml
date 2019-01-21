@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#10ef1b</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="province_line_border">#c7c7c7</color>
+    <color name="base_loading_background">#f5f5f5</color>
+    <color name="base_text_color_light">#909090</color>
+</resources>

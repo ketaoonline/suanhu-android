@@ -1,0 +1,91 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion globalVersion.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion globalVersion.minSdkVersion
+        targetSdkVersion globalVersion.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    api "com.android.support:appcompat-v7:$globalVersion.supportLibraryVersion"
+    testImplementation 'junit:junit:4.12'
+    api "com.android.support:design:$globalVersion.supportLibraryVersion"
+    api "com.android.support:palette-v7:$globalVersion.supportLibraryVersion"
+    api "com.android.support:cardview-v7:$globalVersion.supportLibraryVersion"
+
+    api 'io.reactivex:rxjava:1.0.14'
+    api 'io.reactivex:rxandroid:1.0.1'
+    api 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    api 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    api 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    api 'com.squareup.okhttp3:okhttp:3.3.1'
+    api 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+
+
+    api 'org.greenrobot:eventbus:3.0.0'
+    api 'com.google.code.gson:gson:2.2.4'
+    api 'com.orhanobut:hawk:2.0.1'
+    api files('libs/android-async-http-1.4.9.jar')
+    api 'cz.msebera.android:httpclient:4.3.6'
+
+
+    /*********************************VIEW_START*************************************/
+    //spinkit
+    api 'com.github.ybq:AndroidSpinKit:v1.0.0'
+    //可展开receclerview
+    api 'com.thoughtbot:expandablerecyclerview:1.3'
+    //图片选择器
+    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    //侧滑删除recyclerview
+    api 'com.yanzhenjie:recyclerview-swipe:1.1.3'
+    //分组recycleview
+    api 'com.timehop.stickyheadersrecyclerview:library:0.4.3'
+    //RecyclerView框架
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.18'
+    //下拉刷新上拉加载
+    api 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    //圆形imageView
+    api 'de.hdodenhof:circleimageview:2.1.0'
+//    //气泡
+//    api 'me.kareluo.ui:popmenu:1.1.0'
+//    //ImmersionBar
+//    api 'com.gyf.barlibrary:barlibrary:2.3.0'
+    //流式布局
+    api 'com.hyman:flowlayout-lib:1.1.2'
+    //noticeView
+    api 'com.github.czy1121:noticeview:1.1.0'
+    //底部弹出框
+    api 'com.github.limxing:Android-PromptDialog:1.1.3'
+//    //城市选择器
+//    api 'liji.library.dev:citypickerview:3.1.12'
+    //TabSwitch
+    api 'lib.kingja.switchbutton:switchbutton:1.1.3'
+    //开关switch
+    api 'ch.ielse:switchbutton:1.0.1'
+//    //时间选择器
+    api 'com.contrarywind:Android-PickerView:4.1.6'
+    //star
+    api 'com.github.ome450901:SimpleRatingBar:1.4.2'
+    /**********************************VIEW_END************************************/
+}

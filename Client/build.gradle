@@ -1,0 +1,134 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs{
+        release {
+            keyAlias 'suanhu'
+            keyPassword '123456'
+            storeFile file('suanhu.jks')
+            storePassword '123456'
+        }
+    }
+
+    compileSdkVersion globalVersion.compileSdkVersion
+    buildToolsVersion globalVersion.buildToolsVersion
+    defaultConfig {
+        applicationId "com.bunnybear.suanhu"
+        minSdkVersion globalVersion.minSdkVersion
+        targetSdkVersion globalVersion.targetSdkVersion
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilter("armeabi-v7a")
+            abiFilter("x86")
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "d48d1c419758d299d95139bc", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+//            minifyEnabled false
+//            shrinkResources false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+//            minifyEnabled false
+//            shrinkResources false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    dexOptions {
+        // 支持大工程模式
+        jumboMode = true
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    lintOptions {
+        //编译的 lint 开关，程序在buid的时候，会执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+        abortOnError false
+    }
+
+//    applicationVariants.all { variant ->
+//        variant.outputs.all {
+//            def df = new SimpleDateFormat("yyyyMMdd_HHmm")
+//            if (variant.name.equalsIgnoreCase('release')) {
+//                outputFileName = "Client-release.apk"
+//            }else{
+//                outputFileName = "Client-debug.apk"
+//            }
+//        }
+//    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$globalVersion.supportLibraryVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':library')
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    implementation project(':jiaozivideoplayer')
+    implementation 'ywl.ywl5320:libmusic:1.2.5'
+    //阿里云
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.squareup.okio:okio:1.9.0'
+    //支付
+    implementation files('libs/alipaySdk-20180601.jar')
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //热更新
+    implementation 'com.tencent.bugly:crashreport_upgrade:1.3.6'
+    // 指定tinker依赖版本（注：应用升级1.3.5版本起，不再内置tinker）
+    implementation 'com.tencent.tinker:tinker-android-lib:1.9.9'
+    implementation 'com.android.support:multidex:1.0.2'
+    //这是谷歌官方提供的分包插件，必须依赖
+    implementation files('libs/open_sdk_r5886_lite.jar')
+
+    implementation 'cn.jiguang.sdk:jpush:3.1.1'//极光推送
+    implementation 'cn.jiguang.sdk:jcore:1.1.9'//极光推送
+
+}
+
+apply from: 'tinker-support.gradle'
+
+
+
+
+
+
